@@ -54,8 +54,8 @@ function calculateGPS(){
 };
 
 window.setInterval(function(){
-	giveGold(goldPerSecond);
-}, 1000);
+	giveGold(goldPerSecond/4);
+}, 250);
 		
 
 	
