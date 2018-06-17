@@ -16,10 +16,10 @@ document.getElementById("fastClickerCost").innerHTML = fastClickerCost;
 //function for adding gold
 function giveGold(number){
 	gold = gold + number;
-	document.getElementById("gold").innerHTML = gold;
+	document.getElementById("gold").innerHTML = Math.round(gold);
 };
 
-//Function for first upgrade
+//Function for first Clicker
 function buyClicker(){
 	var clickerCost = Math.floor(10 * Math.pow(1.1,clickers));
 	if (gold >= clickerCost){
@@ -32,7 +32,7 @@ function buyClicker(){
 	calculateGPS();
 };
 
-//Function for second Upgrade
+//Function for second Clicker
 function buyFastClicker(){
 	var fastClickerCost = Math.floor(50 * Math.pow(1.1,fastClickers));
 	if (gold >= fastClickerCost){

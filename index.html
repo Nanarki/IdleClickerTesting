@@ -3,12 +3,24 @@
 		<link rel="stylesheet" type="text/css" href="interface.css" />
 	</head>
 	<body>
-		Gold: <span id="gold">0</span><br>
-		Gold per Second:<span id="gps">0</span><br>
-		<button type="button" onClick="giveGold(1)">Click Me!</button>
-		<p>
-		Upgrades:<br>
+		<div id="Stats">
+			Gold: <span id="gold">0</span><br>
+			Gold per Second:<span id="gps" >0</span><br>
+		</div>
+
+		<div id="ManualClick">
+		<!-- Clicker and it's upgrades will go here-->
+		<image src ="images/gold3.png" id="goldClick" onClick="giveGold(1)" alt="Click Me!" width=260px height=240px>
+		</div>
 		
+		<!-- GPS Upgrades will go here -->
+		<div id="Upgrades">
+		</div>
+		
+		<div id="clickers">
+		<!-- Auto clickers belong here -->
+		Auto Clickers:<br>
+
 		<!--//Basic clicker upgrade - Power 1-->
 		<button type="button" onClick="buyClicker()">
 		Clicker <span id="clickers">0</span>
@@ -16,7 +28,7 @@
 		Cost: <span id= "clickerCost">0</span>
 		<br>
 		Earn: 1 GPS</button>
-		
+
 		<!--//Basic clicker upgrade - Power 2-->
 		<button type="button" onClick="buyFastClicker()">
 		Fast Clicker <span id="fastClickers">0</span>
@@ -24,8 +36,9 @@
 		Cost: <span id= "fastClickerCost">0</span>
 		<br>
 		Earn: 10 GPS</button>
-		
-	
+		</div>
+
+
 		<script type="text/javascript" src="main.js"></script>
 	</body>
 </HTML>
