@@ -1,72 +1,74 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<!-- jQuery library -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-		<!-- Latest compiled JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-				<link rel="stylesheet" type="text/css" href="interface.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-		
-	</head>
-	<body background-color="black" color="white">
-<div class="container-fluid">
-	<div class="row">
-		<div id="Stats">
-			Gold: <span id="gold">0</span><br>
-			Gold per Second:<span id="gps" >0</span>&emsp;Gold per Click:<span id="gpc">1</span>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-4">
-		<!-- Clicker and it's upgrades will go here-->
-		<image src ="images/gold3.png" id="goldClick" onClick="clickGold()" alt="Click Me!" width=260px height=240px>
-		</div>
-		
-		<!-- GPS Upgrades will go here -->
-		<div class="col-sm-4">
-		Manual Clickers:<br>
-		
-		<button type="button" onClick="buyClickUpgrade()" id="clickUpgrade1">
-		Increase Click Gold
-		<br>
-		Cost: <span id="manualUpgradeCost">0</span>
-		<br>
-		Earn: 1 GPC
-		</button>
-		</div>
-		
-		<div class="col-sm-4">
-		<!-- Auto clickers belong here -->
-		Auto Clickers:<br>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-		<!--//Basic clicker upgrade - Power 1-->
-		<button type="button" onClick="buyClicker()" id="autoUpgrade1">
-		Clicker <span id="clickers">0</span>
-		<br>
-		Cost: <span id= "clickerCost">0</span>
-		<br>
-		Earn: 1 GPS</button>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="interface.css" />
 
-		<!--//Basic clicker upgrade - Power 2-->
-		<button type="button" onClick="buyFastClicker()" id="autoUpgrade2">
-		Fast Clicker <span id="fastClickers">0</span>
-		<br>
-		Cost: <span id= "fastClickerCost">0</span>
-		<br>
-		Earn: 10 GPS</button>
-		</div>
-	</div>
-</div>
 
-		<script type="text/javascript" src="main.js"></script>
-	</body>
-</HTML>
+</head>
+<body background-color="black" color="white">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="Stats">
+                Gold: <span id="gold">0</span><br>
+                Gold per Second:<span id="gps">0</span>&emsp;Gold per Click:<span id="gpc">1</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <!-- Clicker and it's upgrades will go here-->
+                <image src="images/gold3.png" id="goldClick" onClick="clickGold()" alt="Click Me!" width=260px height=240px>
+            </div>
+
+            <!-- GPS Upgrades will go here -->
+            <div class="col-sm-4">
+                Manual Clickers:<br>
+
+                <button type="button" onClick="buyClickUpgrade()" id="clickUpgrade1">
+                    Increase Click Gold
+                    <br>
+                    Cost: <span id="manualUpgradeCost">0</span>
+                    <br>
+                    Earn: 1 GPC
+                </button>
+            </div>
+
+            <div class="col-sm-4">
+                <!-- Auto clickers belong here -->
+                Auto Clickers:<br>
+
+                <!--//Basic clicker upgrade - Power 1-->
+                <button type="button" onClick="buyClicker()" id="autoUpgrade1">
+                    Clicker <span id="clickers">0</span>
+                    <br>
+                    Cost: <span id="clickerCost">0</span>
+                    <br>
+                    Earn: 1 GPS
+                </button>
+
+                <!--//Basic clicker upgrade - Power 2-->
+                <button type="button" onClick="buyFastClicker()" id="autoUpgrade2">
+                    Fast Clicker <span id="fastClickers">0</span>
+                    <br>
+                    Cost: <span id="fastClickerCost">0</span>
+                    <br>
+                    Earn: 10 GPS
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
