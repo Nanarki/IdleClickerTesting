@@ -79,6 +79,27 @@ function calculateGPS(){
 
 window.setInterval(function(){
 	giveGold(goldPerSecond/4);
+	if (gold >= manualUpgradeCost){
+		document.getElementById("clickUpgrade1").style.color = 'black';
+	}
+	else {
+		document.getElementById("clickUpgrade1").style.color = 'red';
+	}
+	
+	if (gold >= clickerCost){
+		document.getElementById("autoUpgrade1").style.color = 'black';
+	}
+	else {
+		document.getElementById("autoUpgrade1").style.color = 'red';
+	}
+
+	if (gold >= fastClickerCost){
+		document.getElementById("autoUpgrade2").style.color = 'black';
+	}
+	else {
+		document.getElementById("autoUpgrade2").style.color = 'red';
+	}
+
 }, 250);
 		
 
