@@ -1,20 +1,38 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
-		<link rel="stylesheet" type="text/css" href="interface.css" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+				<link rel="stylesheet" type="text/css" href="interface.css" />
+
+		
 	</head>
-	<body>
+	<body background-color="black" color="white">
+<div class="container-fluid">
+	<div class="row">
 		<div id="Stats">
 			Gold: <span id="gold">0</span><br>
 			Gold per Second:<span id="gps" >0</span>&emsp;Gold per Click:<span id="gpc">1</span>
 		</div>
-
-		<div id="ManualClick">
+	</div>
+	<div class="row">
+		<div class="col-sm-4">
 		<!-- Clicker and it's upgrades will go here-->
 		<image src ="images/gold3.png" id="goldClick" onClick="clickGold()" alt="Click Me!" width=260px height=240px>
 		</div>
 		
 		<!-- GPS Upgrades will go here -->
-		<div id="Upgrades">
+		<div class="col-sm-4">
 		Manual Clickers:<br>
 		
 		<button type="button" onClick="buyClickUpgrade()">
@@ -26,7 +44,7 @@
 		</button>
 		</div>
 		
-		<div id="autoClickers">
+		<div class="col-sm-4">
 		<!-- Auto clickers belong here -->
 		Auto Clickers:<br>
 
@@ -46,7 +64,8 @@
 		<br>
 		Earn: 10 GPS</button>
 		</div>
-
+	</div>
+</div>
 
 		<script type="text/javascript" src="main.js"></script>
 	</body>
