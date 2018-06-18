@@ -12,11 +12,14 @@ var clickerCost = Math.floor(10 * Math.pow(1.1, clickers));
 var fastClickerCost = Math.floor(50 * Math.pow(1.1, fastClickers));
 
 var manualUpgradeCost = Math.floor(5 * Math.pow(1.05, manualUpgrades + 1));
+var manualBiggerUpgradeCost = Math.floor(47 * Math.pow(1.07, manualUpgrades + 1));
 
 
 document.getElementById("clickerCost").innerHTML = clickerCost;
 document.getElementById("fastClickerCost").innerHTML = fastClickerCost;
 document.getElementById("manualUpgradeCost").innerHTML = manualUpgradeCost;
+document.getElementById("manualBiggerUpgradeCost").innerHTML = manualBiggerUpgradeCost;
+
 
 
 //function for adding gold
@@ -65,10 +68,25 @@ function buyClickUpgrade() {
         gold = gold - manualUpgradeCost;
         document.getElementById("gpc").innerHTML = goldPerClick;
         document.getElementById("gold").innerHTML = gold;
+		goldPerClick = goldPerClick + 1;
     };
-    goldPerClick = goldPerClick + 1;
+    
     manualUpgradeCost = Math.floor(5 * Math.pow(1.05, manualUpgrades + 1));
     document.getElementById("manualUpgradeCost").innerHTML = manualUpgradeCost;
+
+};
+function buyBiggerClickUpgrade() {
+    manualBiggerUpgradeCost = Math.floor(47 * Math.pow(1.07, manualUpgrades + 1));
+    if (gold >= manualBiggerUpgradeCost) {
+        manualUpgrades = manualUpgrades + 1;
+        gold = gold - manualBiggerUpgradeCost;
+        document.getElementById("gpc").innerHTML = goldPerClick;
+        document.getElementById("gold").innerHTML = gold;
+		goldPerClick = goldPerClick + 15;
+    };
+    
+    manualBiggerUpgradeCost = Math.floor(5 * Math.pow(1.05, manualUpgrades + 1));
+    document.getElementById("manualBiggerUpgradeCost").innerHTML = manualBiggerUpgradeCost;
 
 };
 
@@ -87,6 +105,12 @@ window.setInterval(function () {
     }
     else {
         document.getElementById("clickUpgrade1").style.color = 'red';
+    }
+	if (gold >= manualBiggerUpgradeCost) {
+        document.getElementById("clickUpgrade2").style.color = 'black';
+    }
+    else {
+        document.getElementById("clickUpgrade2").style.color = 'red';
     }
 
     if (gold >= clickerCost) {
